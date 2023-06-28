@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>210</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Gulim</family>
+    <pointsize>14</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Ultimate Video Converter</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Vid.ico</normaloff>../Vid.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">color:rgb(180, 180, 180);
+alternate-background-color: rgb(0, 0, 0);
+background-color: rgb(42, 42, 42);
+
+selection-background-color: rgb(0, 0, 0);</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>32</width>
+    <height>32</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="font">
+    <font>
+     <family>Gulim</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>800</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Gulim</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Ultimate Video Converter</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>186</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 14pt &quot;Gulim&quot;;
+border: 0px solid;</string>
+    </property>
+    <property name="title">
+     <string>Encoding Codec</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>171</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <property name="leftMargin">
+       <number>10</number>
+      </property>
+      <item>
+       <widget class="QRadioButton" name="radioButton">
+        <property name="font">
+         <font>
+          <family>Gulim</family>
+          <pointsize>12</pointsize>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;H264&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;Gulim&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Default</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_2">
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;H265&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;Gulim&quot;;</string>
+        </property>
+        <property name="text">
+         <string>HEVC</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>208</x>
+      <y>40</y>
+      <width>186</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 14pt &quot;Gulim&quot;;
+border: 0px solid;</string>
+    </property>
+    <property name="title">
+     <string>Video Quality</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <widget class="QSpinBox" name="spinBox">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>50</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;From 0 to 51. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;(0 - best quality, 51 - the worst quality)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 12pt &quot;Gulim&quot;;
+background-color: rgb(255, 255, 255);
+color:rgb(0, 0, 0);
+</string>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::PlusMinus</enum>
+     </property>
+     <property name="suffix">
+      <string/>
+     </property>
+     <property name="prefix">
+      <string/>
+     </property>
+     <property name="maximum">
+      <number>51</number>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>604</x>
+      <y>40</y>
+      <width>186</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 14pt &quot;Gulim&quot;;
+border: 0px solid;</string>
+    </property>
+    <property name="title">
+     <string>Video Tune</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <widget class="QComboBox" name="comboBox_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>146</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Gulim</family>
+       <pointsize>12</pointsize>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Choose Video Tune&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">selection-color: rgb(255, 255, 255);
+font: 12pt &quot;Gulim&quot;;</string>
+     </property>
+     <property name="currentText">
+      <string/>
+     </property>
+     <property name="insertPolicy">
+      <enum>QComboBox::NoInsert</enum>
+     </property>
+     <property name="placeholderText">
+      <string>None</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>Film</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Animation</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Grain</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Still image</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Fast decode</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Zero Latency</string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>406</x>
+      <y>40</y>
+      <width>186</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 14pt &quot;Gulim&quot;;
+border: 0px solid;</string>
+    </property>
+    <property name="title">
+     <string>Conversion Speed</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <widget class="QComboBox" name="comboBox">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>146</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Gulim</family>
+       <pointsize>12</pointsize>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;The slower the conversion &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;the better the quality&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">selection-color: rgb(255, 255, 255);
+font: 12pt &quot;Gulim&quot;;</string>
+     </property>
+     <property name="currentText">
+      <string/>
+     </property>
+     <property name="insertPolicy">
+      <enum>QComboBox::NoInsert</enum>
+     </property>
+     <property name="placeholderText">
+      <string>None</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>Ultra Fast</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Super Fast</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Very Fast</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Faster</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Fast</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Medium</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Slow</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Slower</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Very Slow</string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>140</y>
+      <width>80</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Gulim</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Start Video Conversion&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>Convert</string>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>groupBox</zorder>
+   <zorder>groupBox_2</zorder>
+   <zorder>groupBox_4</zorder>
+   <zorder>groupBox_3</zorder>
+   <zorder>pushButton</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Gulim</family>
+     <pointsize>10</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;Gulim&quot;;
+selection-background-color: rgb(0, 0, 0);
+background-color: rgb(56, 56, 56);</string>
+   </property>
+   <widget class="QMenu" name="menuChoose_file">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>true</bool>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionSave_Folder"/>
+   </widget>
+   <widget class="QMenu" name="menuLanguage">
+    <property name="title">
+     <string>Language</string>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>true</bool>
+    </property>
+    <addaction name="actionEN"/>
+    <addaction name="separator"/>
+    <addaction name="actionUA"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionHelp"/>
+   </widget>
+   <addaction name="menuChoose_file"/>
+   <addaction name="menuLanguage"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="sizeGripEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <action name="actionNew">
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Load new file </string>
+   </property>
+  </action>
+  <action name="actionSave_Folder">
+   <property name="text">
+    <string>Recent</string>
+   </property>
+   <property name="toolTip">
+    <string>Open recent files</string>
+   </property>
+  </action>
+  <action name="actionEN">
+   <property name="text">
+    <string>EN</string>
+   </property>
+   <property name="toolTip">
+    <string>Change language to english</string>
+   </property>
+  </action>
+  <action name="actionUA">
+   <property name="text">
+    <string>UA</string>
+   </property>
+   <property name="toolTip">
+    <string>Змінити мову на Українську</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
