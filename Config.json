@@ -1,0 +1,29 @@
+{
+    "Presets":[
+        "ultrafast",
+        "superfast",
+        "veryfast",
+        "faster",
+        "fast",
+        "medium",
+        "slow",
+        "slower",
+        "veryslow"
+    ],
+    "Tune":[
+        "film",
+        "animation",
+        "grain",
+        "stillimage",
+        "fastdecode",
+        "zerolatency"
+    ],
+    "Codecs":[
+        "libx264",
+        "libx265"
+    ],
+    "Langs":[
+        "EN",
+        "UA"
+    ]
+}
