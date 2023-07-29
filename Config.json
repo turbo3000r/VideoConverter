@@ -25,5 +25,8 @@
     "Langs":[
         "EN",
         "UA"
-    ]
+    ],
+    "Localization":{
+        "UA":"Localization\\UA"
+    }
 }
