@@ -1,4 +1,4 @@
-import subprocess
+import subprocess, os
 from functools import wraps
 
 # save original function
@@ -13,5 +13,4 @@ def new_Popen(*args, startupinfo=None, **kwargs):
     startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
     # and hide it immediately
     startupinfo.wShowWindow = subprocess.SW_HIDE
-
     return __old_Popen(*args, startupinfo=startupinfo, **kwargs)
