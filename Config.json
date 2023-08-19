@@ -30,7 +30,7 @@
         "UA":"Localization\\UA"
     },
     "Update":{
-        "version" : "A1.1.0",
+        "version" : "1.2.3",
         "check_url":"http://map.mc-dogland.fun:50001/VidCon/version",
         "download_url":"http://map.mc-dogland.fun:50001/VidCon/download"
     }
