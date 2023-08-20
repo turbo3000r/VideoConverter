@@ -75,7 +75,7 @@ def ConvertPrep():
     except AttributeError: # If user not selected input video
         Screen.ErrorNoFileSelected()
         return
-    if Screen.ui.radioButton.isChecked(): args[4] = Codec[0]  # If user choose "Default" codec
+    if Screen.radioButton.isChecked(): args[4] = Codec[0]  # If user choose "Default" codec
     else: args[4] = Codec[1]                                  # If user choose HEVC
     args[6] = Tune[Screen.comboBox_2.currentIndex()]       # Insert tune in command line
     args[8] = Speed[Screen.comboBox.currentIndex()]        # Insert speed preset in command line
@@ -93,7 +93,7 @@ def ConvertPrep():
     Screen.threadpool.start(thread) # Start ffmpeg thread
     TimePass = 0
     while True: # Loop checking 
-        if not done: Screen.ui.statusbar.showMessage(f"Converting {Screen.CurrentVideo[0]}. Passed seconds: {str(TimePass)}")  # If conversion proceeding
+        if not done: Screen.statusbar.showMessage(f"Converting {Screen.CurrentVideo[0]}. Passed seconds: {str(TimePass)}")  # If conversion proceeding
         else:                                                                                                                  # If conversion ended
             Screen.statusbar.showMessage(f"Converted {Screen.CurrentVideo[0]}. Conversion took: {str(TimePass)} seconds")
             Screen.EndConversionDialog(TimePass)
@@ -123,8 +123,8 @@ class Settings(QtWidgets.QWidget):
         self.pushButton_3.clicked.connect(self.close)
         self.trans = QtCore.QTranslator(self)
         self.ChangeLanguage(LANGUAGE)
-        self.toolButton.clicked.connect(lambda e: self.ui.lineEdit.setText(self.choose1()))
-        self.toolButton_2.clicked.connect(lambda e: self.ui.lineEdit_2.setText(self.choose2()))
+        self.toolButton.clicked.connect(lambda e: self.lineEdit.setText(self.choose1()))
+        self.toolButton_2.clicked.connect(lambda e: self.lineEdit_2.setText(self.choose2()))
 
     def Apply(self):
         if LANGUAGE != Langs[self.comboBox.currentIndex()]:
@@ -263,6 +263,7 @@ class MainWindow(QtWidgets.QMainWindow): #Main Window
         msgBox.setWindowTitle("Error! No Save Destination Selected!")
         msgBox.setStandardButtons(QMessageBox.StandardButton.Cancel)
         msgBox.exec()
+        
     
     def Ask_for_update(self, ver):
         msgBox = QMessageBox()
